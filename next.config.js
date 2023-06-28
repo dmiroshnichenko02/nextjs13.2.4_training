@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+    reactStrictMode: true,
+    env: {
+        API_URL: process.env.API_URL,
+    },
+    images: {
+        domains: ["localhost", "cdn.motor1.com"],
+    },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
